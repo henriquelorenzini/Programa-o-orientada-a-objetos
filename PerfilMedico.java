@@ -17,6 +17,8 @@ public class PerfilMedico {
 		this.ano = ano;
 		this.mes = mes;
 		this.sexo = sexo;
+		this.altura = altura;
+		this.peso = peso;
 	}
 //Metodos
 	public String getNome(){
