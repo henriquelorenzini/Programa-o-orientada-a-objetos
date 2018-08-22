@@ -10,7 +10,7 @@ public class PerfilMedico {
 	private Double peso;
 	private Double imc;
 //Construtores
-	public PerfilMedico(String nome, String sobrenome, int dia, int mes, int ano, String sexo){
+	public PerfilMedico(String nome, String sobrenome, int dia, int mes, int ano, String sexo, Double peso, Double altura){
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.dia = dia;
@@ -27,6 +27,12 @@ public class PerfilMedico {
 	}
 	public String getSexo(){
 		return sexo;
+	}
+	public Double getPeso(){
+		return peso;
+	}
+	public Double getAltura(){
+		return altura;
 	}
 	public int getDia (){
 		return dia;
@@ -73,9 +79,13 @@ public class PerfilMedico {
 		this.ano = ano;
 	}
 	
-    public void getImc(){
+    public double getImc(){
         this.imc = this.peso / (this.altura * this.altura);
+		
+		return imc;
+	}
 
+	public void imprimeEstadoImc() {
         if (this.imc < 18.5){
             System.out.printf("Seu IMC e %.2f abaixo do peso%n", this.imc);
         }
