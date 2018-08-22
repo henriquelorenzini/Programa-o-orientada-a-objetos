@@ -35,6 +35,9 @@ public class Paciente{
 		System.out.printf("%nSexo: %s", perfil.getSexo());
 		System.out.printf("%nIdade: %d", perfil.getIdade());
 		System.out.printf("%nImc: %.1f", perfil.getImc());
+		System.out.printf("%nFrequencia cardiaca: %d", perfil.getFcm());
+		System.out.printf("%nFrequencia cardiaca maxima: %d", perfil.getFcaMax());
+		System.out.printf("%nFrequencia cardiaca minima: %d", perfil.getFcaMin());
 
 		entrada.close();
 	}
